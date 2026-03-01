@@ -117,7 +117,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-logo">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="logo-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-          <span className="logo-text">CapCutify AI</span>
+          <span className="logo-text">AI Auto Caption</span>
         </div>
         <div className="nav-links">
           <a href="#">Features</a>
@@ -228,7 +228,7 @@ function App() {
 
             {/* Features Section */}
             <div className="features-section">
-              <h3 className="features-title">Why Choose CapCutify AI?</h3>
+              <h3 className="features-title">Why Choose AI Auto Caption?</h3>
               <div className="features-grid">
                 <div className="feature-item">
                   <div className="feature-icon-wrapper">
@@ -255,24 +255,7 @@ function App() {
 
         {/* Processing State with Video Player Mock */}
         {appState === 'processing' && (
-          <div className="workspace-container">
-            <div className="video-preview-panel">
-              <div className="panel-header">
-                <h3>Video Preview</h3>
-                <span className="file-badge">{file?.name}</span>
-              </div>
-              <div className="video-player-mock">
-                <div className="play-button-overlay">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                </div>
-                <div className="player-controls">
-                  <div className="control-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                  <div className="timeline-bar"><div className="timeline-progress"></div></div>
-                  <div className="time-display">0:00 / 0:00</div>
-                </div>
-              </div>
-            </div>
-
+          <div className="workspace-container centered">
             <div className="action-panel">
               <div className="panel-header">
                 <h3>Automated Transcription</h3>
@@ -295,24 +278,7 @@ function App() {
 
         {/* Result State */}
         {appState === 'result' && (
-          <div className="workspace-container">
-            <div className="video-preview-panel">
-              <div className="panel-header">
-                <h3>Video Preview</h3>
-                <span className="file-badge">{file?.name}</span>
-              </div>
-              <div className="video-player-mock success-state">
-                <div className="subtitle-overlay-mock">
-                  Subtitles generated successfully!
-                </div>
-                <div className="player-controls">
-                  <div className="control-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></div>
-                  <div className="timeline-bar"><div className="timeline-progress full"></div></div>
-                  <div className="time-display">Complete</div>
-                </div>
-              </div>
-            </div>
-
+          <div className="workspace-container centered">
             <div className="action-panel">
               <div className="panel-header">
                 <h3>Export Options</h3>
@@ -354,7 +320,7 @@ function App() {
             <a href="#">Privacy</a>
             <a href="#">Contact</a>
           </div>
-          <div className="copyright">© 2026 CapCutify AI</div>
+          <div className="copyright">© 2026 AI Auto Caption</div>
         </footer>
       )}
     </div>

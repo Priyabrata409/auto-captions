@@ -410,16 +410,15 @@ body {
 
 /* Workspace Layout (Processing/Result) */
 .workspace-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 4rem;
 }
 
-@media (min-width: 900px) {
-  .workspace-container {
-    grid-template-columns: 3fr 2fr;
-  }
+.workspace-container.centered>.action-panel {
+  width: 100%;
+  max-width: 600px;
 }
 
 .panel-header {
