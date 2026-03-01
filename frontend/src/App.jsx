@@ -180,6 +180,10 @@ function App() {
                       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
                     </div>
                     <h2>Drag & Drop video or audio files</h2>
+                    <p className="file-hints" style={{ fontWeight: 600, color: '#10b981', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                      100% Private - We NEVER store your files
+                    </p>
                     <p className="file-hints">Supports MP4, MP3, WAV, MOV | Max 2GB</p>
                     <input
                       type="file"
@@ -236,7 +240,7 @@ function App() {
                   </div>
                   <div className="feature-text">
                     <h4>Multilingual Support</h4>
-                    <p>Support for 130+ languages & accents. Transcribe English, Spanish, French, and more instantly.</p>
+                    <p>Powered by our advanced AI, support for 99+ languages & accents. Seamlessly transcribe English, Spanish, Hindi, French, and more instantly.</p>
                   </div>
                 </div>
                 <div className="feature-item">
@@ -269,7 +273,7 @@ function App() {
                 </div>
                 <div className="status-meta">
                   <span>Processing file securely...</span>
-                  <span>AI Model: Whisper Base</span>
+                  <span>AI Engine: High-Accuracy Captioning</span>
                 </div>
               </div>
             </div>
