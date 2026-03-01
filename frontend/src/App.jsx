@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = 'https://priyabrata409-auto-captions.hf.space';
 
 function App() {
   const [file, setFile] = useState(null);
