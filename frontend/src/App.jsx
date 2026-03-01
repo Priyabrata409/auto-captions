@@ -37,11 +37,19 @@ function App() {
   };
 
   const validateAndSetFile = (selectedFile) => {
-    if (selectedFile.type.startsWith('audio/') || selectedFile.type.startsWith('video/')) {
-      setFile(selectedFile);
-    } else {
+    if (!(selectedFile.type.startsWith('audio/') || selectedFile.type.startsWith('video/'))) {
       alert('Please upload a valid audio or video file.');
+      return;
     }
+
+    // 50 MB limit (50 * 1024 * 1024 bytes)
+    const MAX_FILE_SIZE = 50 * 1024 * 1024;
+    if (selectedFile.size > MAX_FILE_SIZE) {
+      alert('File is too large. Please upload a file smaller than 50MB.');
+      return;
+    }
+
+    setFile(selectedFile);
   };
 
   const removeFile = (e) => {
@@ -184,7 +192,7 @@ function App() {
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                       100% Private - We NEVER store your files
                     </p>
-                    <p className="file-hints">Supports MP4, MP3, WAV, MOV | Max 2GB</p>
+                    <p className="file-hints">Supports MP4, MP3, WAV, MOV | Max 50MB</p>
                     <input
                       type="file"
                       ref={fileInputRef}
