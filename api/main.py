@@ -65,6 +65,6 @@ async def create_transcription(
         cleanup_files([temp_file_path])
         return {"error": str(e)}
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health_check():
     return {"status": "ok"}
